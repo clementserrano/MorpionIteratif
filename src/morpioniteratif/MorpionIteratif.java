@@ -99,6 +99,8 @@ public class MorpionIteratif {
             // Coup joué
             grille[x2][y2] = ia;
 
+            System.out.println("L'IA joue en " + x2 + " " + y2 + ".");
+
             // Affiche la grille
             printGrille();
 
