@@ -212,18 +212,20 @@ public class MorpionIteratif {
         }
 
         // 2ème diagonale
+        i = 0;
+        j = grille[0].length-1;
         n = 0;
-        while (i < grille.length && j < grille[0].length) {
-            if (grille[i][grille[0].length - j].equals(ia)) {
+        while (i < grille.length && j >= 0) {
+            if (grille[i][j].equals(ia)) {
                 n++;
-            } else if (grille[i][grille[0].length - j].equals(player)) {
+            } else if (grille[i][j].equals(player)) {
                 n--;
-            } else if (grille[i][grille[0].length - j].equals(empty)) {
+            } else if (grille[i][j].equals(empty)) {
                 x2 = i;
                 y2 = j;
             }
             i++;
-            j++;
+            j--;
         }
 
         switch (n) {
